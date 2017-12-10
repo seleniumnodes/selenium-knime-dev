@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+  id="com.seleniumnodes.devexamples.feature"
+  label="Development Examples for Selenium Nodes"
+  version="1.0.0.qualifier"
+  provider-name="seleniumnodes.com; Philipp Katz">
+
+  <plugin
+   id="com.seleniumnodes.devexamples.plugin"
+   download-size="0"
+   install-size="0"
+   version="0.0.0"
+   unpack="false"/>
+
+</feature>

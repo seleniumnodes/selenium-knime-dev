@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode
+	icon="./arrow-circle.png"
+	type="Manipulator"
+	xmlns="http://knime.org/node/v3.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://knime.org/node/v3.1 http://knime.org/node/v3.1.xsd">
+	<name>Rotate</name>
+
+	<shortDescription>
+		Allows to change the screen orientation of rotatable devices.
+	</shortDescription>
+
+	<fullDescription>
+
+		<intro>
+
+			<p>Changes the screen orientation of orientation-sensitive devices (mobile devices). This is relevant for the <a href="http://appium.io">Appium</a>-based WebDrivers.</p>
+
+		</intro>
+
+		<option name="Input column">Input column with the WebDriver.</option>
+		<option name="Screen orientation">Either landscape or portrait.</option>
+
+	</fullDescription>
+
+	<ports>
+		<inPort index="0" name="WebDriver">Table with a column which contains a WebDriver.</inPort>
+		<outPort index="0" name="WebDriver">Same as input table.</outPort>
+	</ports>
+</knimeNode>

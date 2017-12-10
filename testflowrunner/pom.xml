@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+	http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.seleniumnodes.devexamples</groupId>
+		<artifactId>com.seleniumnodes.devexamples</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>com.seleniumnodes.devexamples.testflowrunner</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-eclipserun-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<argLine>-ea -Dlog4j.configuration=log4j.xml ${eclipserun.jvm.flags}</argLine>
+					<appArgLine>-noSplash -consoleLog -application org.knime.testing.NGTestflowRunner -root ./testflows -xmlResultDir ${project.build.directory}/testflow-reports -views -logMessages -loadSaveLoad -data ${project.build.directory}/workspace -preferences ./license.epf</appArgLine>
+					<repositories>
+						<repository>
+							<url>http://update.knime.org/analytics-platform/3.5/</url>
+							<layout>p2</layout>
+						</repository>
+						<repository>
+							<url>http://download.seleniumnodes.com/3.5</url>
+							<layout>p2</layout>
+						</repository>
+						<repository>
+							<url>${project.baseUri}/../update/target/repository</url>
+							<layout>p2</layout>
+						</repository>
+					</repositories>
+					<dependencies>
+						<dependency>
+							<artifactId>org.knime.features.base</artifactId>
+							<type>eclipse-feature</type>
+						</dependency>
+						<dependency>
+							<artifactId>org.knime.features.testingapplication</artifactId>
+							<type>eclipse-feature</type>
+						</dependency>
+						<dependency>
+							<artifactId>ws.palladian.nodes.selenium.feature</artifactId>
+							<type>eclipse-feature</type>
+						</dependency>
+						<!-- <dependency>
+							<artifactId>org.eclipse.equinox.p2.user.ui</artifactId>
+							<type>eclipse-feature</type>
+						</dependency> -->
+						<dependency>
+							<artifactId>org.knime.features.base.filehandling</artifactId>
+							<type>eclipse-feature</type>
+						</dependency>
+						<dependency>
+							<artifactId>com.seleniumnodes.devexamples.feature</artifactId>
+							<type>eclipse-feature</type>
+						</dependency>
+					</dependencies>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>eclipse-run</goal>
+						</goals>
+						<phase>integration-test</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>de.philippkatz.maven.plugins</groupId>
+				<artifactId>test-parser-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<resultsDirectory>${project.build.directory}/testflow-reports</resultsDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>testparser</goal>
+						</goals>
+						<phase>integration-test</phase>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

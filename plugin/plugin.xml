@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="ws.palladian.nodes.selenium.plugin.LocatorFactory">
+      <LocatorFactory
+            factoryClass="com.seleniumnodes.devexamples.locators.ContainsTextLocatorFactory">
+      </LocatorFactory>
+      <LocatorFactory
+            factoryClass="com.seleniumnodes.devexamples.locators.AppiumLocatorFactories$AccessibilityIdLocatorFactory">
+      </LocatorFactory>
+      <LocatorFactory
+            factoryClass="com.seleniumnodes.devexamples.locators.AppiumLocatorFactories$AndroidUIAutomatorLocatorFactory">
+      </LocatorFactory>
+      <LocatorFactory
+            factoryClass="com.seleniumnodes.devexamples.locators.AppiumLocatorFactories$IOsUiAutomationLocatorFactory">
+      </LocatorFactory>
+   </extension>
+   <extension
+         point="ws.palladian.nodes.selenium.plugin.WebDriverFactory">
+      <WebDriverFactory
+            factoryClass="com.seleniumnodes.devexamples.webdrivers.AppiumIOsDriverFactory">
+      </WebDriverFactory>
+   </extension>
+   <extension
+         point="org.knime.workbench.repository.nodes">
+      <node
+            category-path="/selenium"
+            deprecated="false"
+            factory-class="com.seleniumnodes.devexamples.nodes.rotate.RotateNodeFactory">
+      </node>
+   </extension>
+
+</plugin>

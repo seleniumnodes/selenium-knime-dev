@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Selenium Nodes Development Examples Update Site">
+      Update Site for Selenium Nodes Development Examples.
+   </description>
+   <feature id="com.seleniumnodes.devexamples.feature">
+      <category name="seleniumnodes-dev-examples"/>
+   </feature>
+   <category-def name="seleniumnodes-dev-examples" label="Selenium Nodes Development Examples">
+      <description>
+         This category contains Development Examples for the Selenium Nodes for KNIME.
+      </description>
+   </category-def>
+</site>
