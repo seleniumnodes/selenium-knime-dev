@@ -14,6 +14,8 @@ The following extension points are currently provided by the Selenium Nodes:
 
 * `ws.palladian.nodes.selenium.plugin.WebDriverFactory` — Allows to register new `WebDriver` implementations which can be selected in the **WebDriver Factory** node.
 
+* `ws.palladian.nodes.selenium.plugin.CapabilitySnippetSource` — Allows to register JSON snippets for providing Selenium capabilities which can be selected in the **WebDriver Factory** node. Check the file `/plugin/resources/AppiumCapabilitySnippets.json` for the syntax.
+
 * `ws.palladian.nodes.selenium.plugin.LocatorFactory` — Allows to add additional locators for the **Find Elements** node. See `/plugin/src/com/seleniumnodes/devexamples/locators/ContainsTextLocatorFactory.java` for an example implementation.
 
 * Besides these, there’s also an example for a node implementation using KNIME’s `org.knime.workbench.repository.nodes` extension point in `/plugin/src/com/seleniumnodes/devexamples/nodes`. It makes use of the `ws.palladian.nodes.selenium.types.WebDriverValue` data value to interact with a mobile browser.

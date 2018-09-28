@@ -30,5 +30,11 @@
             factory-class="com.seleniumnodes.devexamples.nodes.rotate.RotateNodeFactory">
       </node>
    </extension>
+   <extension
+         point="ws.palladian.nodes.selenium.plugin.CapabilitySnippetSource">
+      <CapabilitySnippetSource
+            jsonFile="resources/AppiumCapabilitySnippets.json">
+      </CapabilitySnippetSource>
+   </extension>
 
 </plugin>

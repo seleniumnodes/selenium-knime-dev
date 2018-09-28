@@ -1,0 +1,17 @@
+{
+  "factoryIdentifiers": [
+    "io.appium.java_client.ios.IOSDriver.Safari"
+  ],
+  "snippets": [
+    {
+      "name": "Safari on iOS",
+      "snippet": {
+      	"deviceName": "iPhone 6",
+      	"platformName": "iOS",
+      	"platformVersion": "10.3",
+      	"browserName": "Safari",
+      	"automationName": "XCuiTest"
+      }
+    }
+  ]
+}
