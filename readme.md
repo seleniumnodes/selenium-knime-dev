@@ -70,4 +70,4 @@ For running test workflows, a valid Selenium Nodes license needs to be present. 
 
 - - -
 
-Selenium Nodes for KNIME were created by Philipp Katz, 2015 — 2017.
+Selenium Nodes for KNIME were created by [seleniumnodes.com](http://seleniumnodes.com), 2015 — 2018.
