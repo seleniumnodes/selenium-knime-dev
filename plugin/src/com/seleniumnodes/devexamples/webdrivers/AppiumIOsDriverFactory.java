@@ -3,6 +3,9 @@ package com.seleniumnodes.devexamples.webdrivers;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import javax.swing.Icon;
+
+import org.knime.core.node.util.ViewUtils;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -28,6 +31,8 @@ public class AppiumIOsDriverFactory extends AbstractWebDriverFactory<IOSDriver<?
 	private static final String READABLE_NAME = "Appium: Safari on iOS";
 
 	private static final String IDENTIFIER = "io.appium.java_client.ios.IOSDriver.Safari";
+
+	private static final Icon ICON = ViewUtils.loadIcon(AppiumIOsDriverFactory.class, "appium.png");
 
 	public AppiumIOsDriverFactory() {
 		super(true, READABLE_NAME, IDENTIFIER);
@@ -61,6 +66,11 @@ public class AppiumIOsDriverFactory extends AbstractWebDriverFactory<IOSDriver<?
 	@Override
 	public boolean isRemote() {
 		return true;
+	}
+
+	@Override
+	public Icon getIcon() {
+		return ICON;
 	}
 
 }
